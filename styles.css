@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+    position: relative;
+}
+
+.body-container{
+    display: flex; 
+   
+}
+
+.side{ 
+    background-color: #00093d; 
+}
+
+.side h1{
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+.side p{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    
+}
+
+.side li{
+    color: white;
+    text-align: center;
+}
+
+.side li a{
+    color: white;
+}
+
+.side img{
+    display: block;
+    border-radius: 50%;
+    height: auto;
+   
+}
+
+.mainHeader{
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.card-container{
+    display: flex; 
+       
+}
+
+.card{
+    position: relative;
+    border: 6px solid #00093d;
+    border-radius: 25px;
+    background-color: rgba(0, 9, 61, 0.5);
+    overflow: hidden;
+    padding: 0px 0px 10px 0px;
+    
+}
+
+.card img{
+    display: block;
+    width: 100%;   
+}
+
+.card h1{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card p{
+    color: white;   
+    font-family: 'Roboto', sans-serif;
+}
+
+.card ul{
+    text-align: center;  
+}
+
+.card li{
+    display: inline-block;
+    margin: 10px 15px;
+    list-style: none;
+    width: 30%;
+    
+}
+
+.card li a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.card li a:hover{
+    font-weight: 900;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .body-container{
+        flex-direction: column;
+    }
+
+    .side h1{
+        font-size: 2.25rem;
+    }
+
+    .side p{
+        font-size: 1.25rem;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;     
+    }
+
+    .side img{
+      width: 60%;
+      height: auto; 
+      margin: 50px auto 10px auto;
+    }
+
+    .side ul{
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .side li{
+        font-size: 1.25rem;
+        display: inline-block;
+        margin: 10px 20px;
+    }
+
+    .mainHeader{
+        font-size: 2.25rem;
+        margin: 25px auto 5px auto;
+        padding: 5px;
+    }
+
+    .card-container{
+        flex-direction: column;
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .card{
+        max-width: 400px;
+        height: auto;
+        margin: 15px auto;
+    }
+
+    .card h1{
+        font-size: 2rem;
+        text-align: center;
+        margin: 5px auto;
+    }
+
+    .card p{
+        font-size: 1rem;
+        text-align: justify;
+        text-indent: 10px;
+        padding: 10px;
+    }
+
+    .card li a{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (min-width: 601px) {
+
+    .body-container{
+        flex-direction: column;  
+    }
+
+    .side h1{
+        font-size: 2.5rem;
+    }
+
+    .side p{
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .side img{
+        width: 50%;
+        height: auto; 
+        margin: 50px auto 10px auto;
+      }
+
+    .side ul{
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .side li{
+        font-size: 1.25rem;
+        display: inline-block;
+        margin: 10px 20px;
+    }
+
+    .mainHeader{
+        font-size: 2.5rem;
+        margin: 25px auto 10px auto;
+        padding: 5px;
+    }
+
+    .card-container{
+        flex-direction: column;
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .card{
+        max-width: 400px;
+        margin: 15px auto;
+    }
+
+    .card h1{
+        font-size: 2rem;
+        text-align: center;
+        margin: 5px auto;
+    }
+
+    .card p{
+        
+        font-size: 1rem;
+        text-align: justify;
+        text-indent: 10px;
+        padding: 10px;
+        
+    }
+
+    .card ul{
+       
+        
+    }
+
+    .card li{
+           
+    }
+
+    .card li a{
+        font-size: 1.5rem;
+            
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    
+  
+
+    .side img{
+        width: 40%;
+    }
+
+    .card-container{ 
+        width: 100%;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    
+
+  
+}
+
+@media only screen and (min-width: 992px) {
+
+    .body-container{
+        flex-direction: row;
+    }
+
+    .side{
+        position: sticky;
+        top: 0;
+        left: 0;
+        flex: 40%;
+        height: 100vh;
+    }
+
+    .side h1{
+        font-size: 3rem;
+        margin: 20px 10px;
+    }
+
+    .side p{
+        font-size: 2rem;
+    }
+
+    .side ul{
+        margin: 25px auto 0px auto;
+    }
+
+    .side li{
+        font-size: 1.75rem;
+        
+    }
+
+    .side img{
+        width: 60%;
+    }
+
+    .sideDiv{
+        margin: 100px auto;
+    }
+
+    .main{
+        flex: 60%;
+    }
+
+    .mainHeader{
+        font-size: 3rem;
+        
+    }
+
+    .card-container{
+        flex-direction: column;
+    }
+  
+    .card{
+        max-width: 350px;
+    }
+
+    .card h1{
+        font-size: 2.25rem;
+        
+    }
+
+    .card p{
+        font-size: 1.25rem;
+    }
+
+    .card li a{
+        font-size: 1.75rem;
+    }
+    
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .side{
+        flex: 35%;
+    }
+
+    .side img{
+        max-width: 400px;
+    }
+ 
+    .main{
+      flex: 65%;
+    }
+
+    .mainHeader{
+        margin: 83px auto 10px auto;
+    }
+
+    .card-container{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;  
+    }
+
+    .card{
+        max-width: 350px;
+        margin: 10px;
+    }
+
+}
