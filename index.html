@@ -2,56 +2,273 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/44e13246f8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
-    <title>Jacob Peterson Projects</title>
-</head>
-<body>
-<div class="body-container">
-    <div class="side">
-        <div class="sideDiv">
-        <img src="Images/nicpic.jpg" alt="Jacob Peterson">
-        <h1>Front End Developer</h1>
-        <p>Hello, I am Jacob Peterson and this my Project page.</p>
-        <ul>
-            <li><a href="http://www.twitter.com/jacobscpet" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-            <li><a href="http://www.github.com/peterson-jacob" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/jacob-peterson-035309253/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-        </ul>
-        </div>
-    </div>
-    <div class="main">
-        <div class="mainHeader">My Projects</div>
-        <div class="card-container">
-            <div class="card">
-                <img src="Images/petes.png" alt="Petes Pizza">
-                <h2>Petes Pizza</h2>
-                
-                <p> Pete’s Pizza is a small brochure website I created to demonstrate my ability to be able to 
-                    create unique websites. During the build process, the languages I used HTML, CSS, SASS, 
-                    JavaScript and JQuery. I enjoyed building Pete’s Pizza because it helped learn and 
-                    develop my web development skills.</p>
-                    <ul>
-                        <li><a href="http://peterson-jacob.github.io/petes-pizza" target="_blank">Live</a></li>
-                        <li><a href="http://www.github.com/peterson-jacob/petes-pizza" target="_blank">Code</a></li>
-                    </ul>
-            </div>
-            <div class="card">
-                <img src="Images/uptown.png" alt="uptown Sunglasses">
-                <h2>Uptown Sunglasses</h2>
-                <p>Uptown Sunglasses is a ecommerce website that was built using HTML, CSS, a little Bootstrap, Javascript and GSAP. 
-                    This site was both challenging and fun all in one. I really enjoyed animating the different sections that they 
-                    open and close properly without disrupting the integrity of the site or other animations.</p>
-                    <ul>
-                        <li><a href="http://peterson-jacob.github.io/uptown-sunglasses" target="_blank">Live</a></li>
-                        <li><a href="http://www.github.com/peterson-jacob/uptown-sunglasses" target="_blank">Code</a></li>
-                    </ul>
-            </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/animation.js" defer></script>
+  
+   
     
+    <title>Jacob Peterson Portfolio</title>
+</head>
+<body class="bg-neutral-100 ">
+
+    <div class="max">
+    <header class="sticky top-0 w-full bg-black border-b-4 border-sky-500 flex z-10 header-overlay">
+        <div class="flex-auto w-5/6 lg:w-1/4 logo">
+            <h1 class="text-white text-3xl text-center font-normal font-pacifico mt-5 mb-2 px-1  headerLogo"><a href="#">Jacob Peterson</a></h1>
+        </div>
+        <div class="headerNav hidden flex-auto lg:w-3/4 lg:inline-flex">
+            <div class="header-content flex-auto lg:w-4/5 "  >
+                <ul class="text-white text-xl text-center font-normal font-poppins w-full my-0 mx-auto ">
+                    <li class="inline-block mt-7 mb-1 mx-8 hover:text-sky-500 hover:border-b-2 border-sky-500 2xl:mx-16"><a href="#About">About</a></li>
+                    <li class="inline-block mt-7 mb-1 mx-8 hover:text-sky-500 hover:border-b-2 border-sky-500 2xl:mx-16"><a href="#Portfolio">Portfolio</a></li>
+                    <li class="inline-block mt-7 mb-1 mx-8 hover:text-sky-500 hover:border-b-2 border-sky-500 2xl:mx-16"><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="flex-auto lg:w-1/5">
+                <ul class="text-white font-medium font-poppins text-xl mx-auto ">
+                    <li class="text-center mt-5 mx-auto w-32 py-1 px-0 bg-sky-500 hover:bg-sky-800 rounded-3xl"><a href="Resume-Jacob-Peterson.pdf" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex-auto w-1/6 lg:hidden hamburger">
+            <div class="mt-7 w-12 borderBar" onclick="toggle(this)">
+                <div class="w-10 h-0.5 bg-white m-1.5 duration-75 barOne"></div>
+                <div class="w-10 h-0.5 bg-white m-1.5 duration-75 barTwo"></div>
+                <div class="w-10 h-0.5 bg-white m-1.5 duration-75 barThree"></div>
+            
+            
+            <div>
+                <ul class="hidden w-full bg-sky-950 text-2xl font-medium font-poppins mt-4 mobileNav" id="mobile" >
+                    <li class="text-white text-center my-20 hover:text-sky-500"><a href="#About">About</a></li>
+                    <li class="text-white text-center my-20 hover:text-sky-500"><a href="#Portfolio">Portfolio</a></li>
+                    <li class="text-white text-center my-20 hover:text-sky-500"><a href="#Contact">Contact</a></li>
+                    <li class="text-white text-center my-20 mx-auto bg-sky-500 w-32 py-1 px-0 rounded-3xl"><a href="Resume-Jacob-Peterson.pdf" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        
+    </header>
+    
+    <section class="relative jumbo" id="#">
+        <img src="images/pexels2.jpg" alt="" class="w-full">
+        <div class="w-11/12 my-0 mx-auto">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-5/6 py-12 Greetings">
+                <h1 class="text-white text-center font-black font-poppins text-5xl p-4 my-0 mx-auto lg:w-11/12 lg:text-7xl jumboHeader"><span id="headAnime">Front end</span> Developer</h1>
+                <p class="text-white text-center font-normal font-poppins w-11/12 mt-2 mb-8 mx-auto text-lg pb-2 lg:text-xl jumboPara">
+                    Hello, I am Jacob Peterson and thank you for visiting my Portfolio website.
+                </p>
+    
+                <div class="mx-auto my-4 lg:my-8 text-center jumboSocial">
+                    <ul class="text-white text-2xl lg:text-3xl inline-flex">
+                        <li><a href="http://www.twitter.com/jacobscpet" target="_blank"><i class="mx-5 fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="http://www.github.com/peterson-jacob" target="_blank"><i class="mx-5 fa-brands fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/jacob-peterson-035309253/" target="_blank"><i class="mx-5 fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+<section class="relative my-0 mx-auto py-20 flex flex-col lg:flex-row About aboutSection" id="About">
+    <div class="flex-1 mx-auto lg:my-8 opacity-0 mySelf">
+        <h1 class="text-white font-bold font-poppins text-3xl py-4 mx-auto w-5/6 text-left  lg:text-4xl 2xl:w-2/3 aboutHeader">About Myself</h1>
+            <div class="my-6 text-white mx-auto w-5/6 text-justify text-sm font-poppins lg:text-base xl:text-lg 2xl:w-2/3 aboutMe">
+                <p class="my-6 indent-8 leading-7">Greetings! I am Jacob Peterson, and I am delighted that you have taken the time to explore my website. 
+                    I pursued my educational journey at Tulsa Community College in Oklahoma, culminating in an Associate degree in Information Technology 
+                    in 2017, boasting a commendable 3.5 GPA. Throughout my time there, I acquired a solid foundation in web development and honed my coding 
+                    skills.</p>
+                
+                <p class="indent-8 leading-7">I am particularly passionate about frontend web development, which has led me to explore various programming
+                     languages and frameworks. When I am not coding, you can find me enjoying quality time with my family and friends, gaming on my PlayStation, 
+                     or simply unwinding by the lake.</p>
+            </div>
+    </div>
+    <div class="flex-1 ">
+        <img src="images/nicpic.jpg" alt="Jacob Peterson" class="rounded-full lg:my-12 mx-auto shadow-lg shadow-neutral-900 aboutImg">
+    </div>
+</section>
+
+<section class="relative pt-28 pb-12 lg:pb-40 Skills">
+    <h1 class="text-white font-extrabold font-poppins text-center mt-12 mb-4 mx-auto text-3xl lg:text-4xl  techHeader">Tech Stack</h1>
+
+    <div class="flex flex-wrap w-64 my-4 mx-auto px-1 skillCards">
+        
+        <div class="flex-initial w-24 bg-white border-b-4 border-sky-500 rounded-lg my-4 mx-auto py-2  shadow-lg shadow-neutral-900 xl:my-4 xl:mx-auto xl:w-28 sCard">
+            <p class="text-6xl my-2 text-center xl:text-7xl"><i class="fa-brands fa-html5"></i></p>
+            <h2 class="text-center font-bold text-lg">HTML</h2>
         </div>
 
+        <div class="flex-initial w-24 bg-white border-b-4 border-sky-500 rounded-lg my-4 mx-auto py-2  shadow-lg shadow-neutral-900 xl:my-4 xl:mx-auto xl:w-28 sCard">
+            <p class="text-6xl my-2 text-center xl:text-7xl"><i class="fa-brands fa-css3-alt"></i></p>
+            <h2 class="text-center font-bold text-lg">CSS</h2>
+        </div>
+
+        <div class="flex-initial w-24 bg-white border-b-4 border-sky-500 rounded-lg my-4 mx-auto p-2 shadow-lg shadow-neutral-900 xl:my-4 xl:mx-auto xl:w-28 sCard">
+            <p class="text-6xl my-2 text-center xl:text-7xl"><i class="fa-brands fa-js"></i></p>
+            <h2 class="text-center font-bold text-lg">JavaScript</h2>
+        </div>
+
+        <div class="flex-initial w-24 bg-white border-b-4 border-sky-500 rounded-lg my-4 mx-auto p-2 shadow-lg shadow-neutral-900 xl:my-4 xl:mx-auto xl:w-28 sCard">
+            <p class="text-6xl my-2 text-center xl:text-7xl"><i class="fa-brands fa-react"></i></p>
+            <h2 class="text-center font-bold text-lg">React</h2>
+        </div>
+
+        <div class="flex-initial w-24 bg-white border-b-4 border-sky-500 rounded-lg my-4 mx-auto p-2 shadow-lg shadow-neutral-900 xl:my-4 xl:mx-auto xl:w-28 sCard">
+            <p class="text-6xl my-2 text-center xl:text-7xl"><i class="fa-brands fa-node-js"></i></p>
+            <h2 class="text-center font-bold text-lg">Node</h2>
+        </div>
+
+        <div class="flex-initial w-24 bg-white border-b-4 border-sky-500 rounded-lg my-4 mx-auto p-2 shadow-lg shadow-neutral-900 xl:my-4 xl:mx-auto xl:w-28 sCard">
+            <p class="text-6xl my-2 text-center xl:text-7xl"><i class="fa-brands fa-sass"></i></p>
+            <h2 class="text-center font-bold text-lg">SASS</h2>
+        </div>
+
+        <div class="flex-initial w-24 bg-white border-b-4 border-sky-500 rounded-lg my-4 mx-auto p-2 shadow-lg shadow-neutral-900 xl:my-4 xl:mx-auto xl:w-28 sCard">
+            <p class="text-6xl my-2 text-center xl:text-7xl"><img src="https://yt3.googleusercontent.com/ikv41jMTr1uHGdILrJhvbfVJcDt4oqhwApKX37TjAleF_cRPbF2W-waj7uMnS5JySvnlvAlTCg=s900-c-k-c0x00ffffff-no-rj" alt="tailwind css"></p>
+            <h2 class="text-center font-bold text-lg">Tailwind</h2>
+        </div>
+
+        <div class="flex-initial w-24 bg-white border-b-4 border-sky-500 rounded-lg my-4 mx-auto p-2 shadow-lg shadow-neutral-900 xl:my-4 xl:mx-auto xl:w-28 sCard">
+            <p class="text-6xl my-2 text-center xl:text-7xl"><img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next Js"></p>
+            <h2 class="text-center font-bold text-lg">Next.js</h2>
+        </div>
+    </div>
+
+    <div class="w-5/6 my-16 mx-auto bg-sky-500 h-1 lg:w-11/12 line"></div>
+
+    <div class="w-4/5 my-8 mx-auto lg:mt-12 lg:mb-0 lg:pl-5 education">
+        <h1 class="text-white font-extrabold font-poppins text-left my-2 mx-auto text-3xl lg:text-4xl edHeader">Education</h1>
+        <p class="text-white font-poppins text-base lg:text-lg my-1"><span class="font-bold mr-2">School:</span>  Tulsa Community College</p>
+        <p class="text-white font-poppins text-base lg:text-lg my-1"><span class="font-bold mr-2">Location:</span>  Tulsa, Oklahoma</p>
+        <p class="text-white font-poppins text-base lg:text-lg my-1"><span class="font-bold mr-2">Degree:</span>  Associate in Information Technology</p>
+        <p class="text-white font-poppins text-base lg:text-lg my-1"><span class="font-bold mr-2">Graduated: </span> 2017 </p>
+        <p class="text-white font-poppins text-base lg:text-lg my-1"><span class="font-bold mr-2">G.P.A:</span>  3.5 </p>
+
+    </div>
+</section>
+
+    <section class="relative Portfolio overflow-hidden" id="Portfolio">
+        <div class="pt-32 pb-20 mx-auto">
+            <h1 class="text-sky-950 font-extrabold font-poppins mt-4 mb-4 text-3xl lg:text-4xl  text-center  portHeader">Portfolio</h1>
+
+            <div class="w-1/3 mt-0 mb-8 mx-auto bg-sky-500 h-1 lg:w-1/4 line"></div>            
+            <div class="flex flex-wrap my-0 mx-auto w-full  cardSection">
+
+                <div class="flex-initial w-3/4 md:w-80 my-8 mx-auto shadow-lg shadow-neutral-900 rounded-2xl overflow-hidden lg:w-96 hover:shadow-xl hover:shadow-black relative card">
+                    <img src="images/gash.png" alt="Gash Rental Car">
+                    <h2 class="font-extrabold font-poppins text-2xl p-2">Gash Rental Car</h2>
+                    <p class="p-2 text-sm">Gash Rental Car helped me develop my skills in working with different JavaScript frameworks such as React and Next.js.
+                         In addition gave me a strong understanding of working with state management, and Hooks. I had fun building this site and learning about 
+                         the different functionality of using React in developing this project. </p>
+                        <div class="inline-flex mx-auto">
+                            <p class="text-2xl mx-2 text-center xl:text-3xl"><i class="fa-brands fa-css3-alt"></i></p>
+                            <p class="text-2xl mx-2 text-center xl:text-3xl"><i class="fa-brands fa-js"></i></p>
+                            <p class="text-2xl mx-2 text-center xl:text-3xl"><i class="fa-brands fa-react"></i></p>
+                            <p class="text-2xl mx-2 text-center xl:text-3xl"><img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" class="tailwind" alt="Next.js"></p>
+                            <p class="text-2xl mx-2 text-center xl:text-3xl"><img src="https://yt3.googleusercontent.com/ikv41jMTr1uHGdILrJhvbfVJcDt4oqhwApKX37TjAleF_cRPbF2W-waj7uMnS5JySvnlvAlTCg=s900-c-k-c0x00ffffff-no-rj" class="tailwind" alt="tailwind css"></p>
+                        </div>
+                    <ul class="text-center text-xl text-black w-full my-0 mx-auto ">
+                        <li class="inline-block my-4 mx-8 py-1 px-3  "><a href="https://gsr-peterson-jacobs-projects.vercel.app/" target="_blank">Live</a></li>
+                        <li class="inline-block my-4 mx-8 py-1 px-3  "><a href="https://github.com/Peterson-Jacob/gsr" target="_blank">Code</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="flex-initial w-3/4 md:w-80  my-8 mx-auto shadow-lg shadow-neutral-900 rounded-2xl overflow-hidden lg:w-96 hover:shadow-xl hover:shadow-black relative card ">
+                    <img src="images/smithdds.png" alt="Glenn Smith DDS">
+                    <h2 class="font-extrabold font-poppins text-2xl p-2">Glenn Smith Dentistry</h2>
+                    <p class="p-2 text-sm">I created Glenn Smith Dentistry as a brochure site to demonstrate my ability to create unique websites.
+                        I create this site using HTML, TailwindCSS, and JavaScript. The Animations I created using GSAP. I enjoyed building this site
+                         for it gave me the ability to fine-tune my web development skills. </p>
+                    <div class="inline-flex mx-auto">
+                        <p class="text-2xl mx-2 text-center xl:text-3xl"><i class="fa-brands fa-html5"></i></p>
+                        <p class="text-2xl mx-2 text-center xl:text-3xl"><i class="fa-brands fa-css3-alt"></i></p>
+                        <p class="text-2xl mx-2 text-center xl:text-3xl"><i class="fa-brands fa-js"></i></p>
+                        <p class="text-2xl mx-2 text-center xl:text-3xl"><img src="https://yt3.googleusercontent.com/ikv41jMTr1uHGdILrJhvbfVJcDt4oqhwApKX37TjAleF_cRPbF2W-waj7uMnS5JySvnlvAlTCg=s900-c-k-c0x00ffffff-no-rj" class="tailwind" alt="tailwind css"></p>
+                    </div>
+                    <ul class="text-center text-xl text-black w-full my-0 mx-auto ">
+                        <li class="inline-block my-4 mx-8 py-1 px-3 "><a href="https://peterson-jacob.github.io/glennsmithDDS/" target="_blank">Live</a></li>
+                        <li class="inline-block my-4 mx-8 py-1 px-3  "><a href="https://github.com/Peterson-Jacob/glennsmithDDS" target="_blank">Code</a></li>
+                    
+                    </ul>
+                </div>
+
+                <div class="flex-initial w-3/4 md:w-80  my-8 mx-auto shadow-lg shadow-neutral-900 rounded-2xl overflow-hidden lg:w-96 hover:shadow-xl hover:shadow-black relative card">
+                    <img src="images/petes.png" alt="Petes Pizza" class=" w-full">
+                    <h2 class="font-extrabold font-poppins text-2xl p-2">Pete's Pizza</h2>
+                    <p class="p-2 text-sm">Pete’s Pizza is a small ecommerce website I created to demonstrate my ability to be able to create unique websites. 
+                        During the build process, the languages I used HTML, CSS, SASS, JavaScript and JQuery. I enjoyed building Pete’s Pizza because 
+                        it helped learn and develop my web development skills.</p>
+                        <div class="inline-flex mx-auto">
+                            <p class="text-2xl mx-2 text-center xl:text-3xl"><i class="fa-brands fa-html5"></i></p>
+                            <p class="text-2xl mx-2 text-center xl:text-3xl"><i class="fa-brands fa-css3-alt"></i></p>
+                            <p class="text-2xl mx-2 text-center xl:text-3xl"><i class="fa-brands fa-js"></i></p>
+                            <p class="text-2xl mx-2 text-center xl:text-3xl"><i class="fa-brands fa-sass"></i></p>
+                        </div>
+                    <ul class="text-center text-xl text-black w-full my-0 mx-auto ">
+                        <li class="inline-block my-4 mx-8 py-1 px-3 "><a href="https://peterson-jacob.github.io/petes-pizza/" target="_blank">Live</a></li>
+                        <li class="inline-block my-4 mx-8 py-1 px-3 "><a href="https://github.com/Peterson-Jacob/petes-pizza" target="_blank">Code</a></li>  
+                    </ul>
+                </div>
+            
+
+               
+            </div>
+
+        </div>
+    </section>
+    <section class="relative bg-sky-800  contact" id="Contact">
+        <div class="pt-20 pb-20 px-auto   mx-auto  ">
+            <h1 class="text-white font-extrabold font-poppins my-8 mx-auto text-4xl text-center contactHeader">Contact</h1>
+
+            <div class="w-5/6 mb-12 mx-auto lg:w-1/2 xl:w-1/3 ">
+                <p class="text-white font-poppins text-base text-center">If you would like to hire for a project or job, please contact
+                     me through my social media or you can send me a email. Thank you</p>
+            </div>
+
+            <div class="mx-auto my-4 lg:my-0 text-center">
+                <ul class="text-white text-3xl inline-flex lg:text-4xl">
+                    <li><a href="http://www.twitter.com/jacobscpet" target="_blank"><i class="mx-5 fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="http://www.github.com/peterson-jacob" target="_blank"><i class="mx-5 fa-brands fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/jacob-peterson-035309253/" target="_blank"><i class="mx-5 fa-brands fa-linkedin"></i></a></li>
+                    <li> <a href="mailto:jacobp3230@gmail.com"><i class="mx-5 fa-solid fa-envelope"></i></a></li>
+                </ul>
+            </div>
+            
+        </div>
+    <!--     <div class="w-11/12  mx-auto pt-0 pb-20 text-white  md:w-2/3 lg:w-1/2 2xl:w-1/3 appointmentForm">
+           
+            <form class="text-base md:text-lg index.html" action="post">
+                <label for="text-lg name">Name</label>
+                <input class="w-full mb-5 py-2 text-black" type="text" id="fname">
+
+                <label for="  email">Email</label>
+                <input class="w-full mb-5 py-2 text-black" type="text" id="email">
+
+                <label for="subject">Subject</label>
+                <input class="w-full mb-5 py-2 text-black" type="text" id="subject">
+
+                <label for=" message">Message</label>
+                <textarea class="w-full mb-5 h-48 text-black"  id="message" ></textarea>
+
+                <input class="bg-sky-500 text-white text-lg font-bold py-2 px-5 cursor-pointer" type="button" value="SUBMIT">
+            </form>
+        </div> -->
+        
+    </section>
 </div>
 </body>
 </html>
