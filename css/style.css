@@ -1,0 +1,228 @@
+.header-overlay::before,
+.header-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.headerLogo{
+  text-shadow: 3px 3px 8px #1572b6;
+}
+
+
+.jumboHeader, .jumboPara, .fa-x-twitter, .fa-github, .fa-linkedin, .fa-envelope{
+  text-shadow: 2px 2px 6px #000000;
+}
+
+.Skills{
+  background: rgb(7,89,133);
+  background: linear-gradient(180deg, rgba(7,89,133,1) 5%, rgba(75,85,99,1) 10%);
+}
+
+.About{
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(7,89,133,1) 3%);
+}
+
+.Portfolio{
+  background: rgb(75,85,99);
+  background: linear-gradient(180deg, rgba(75,85,99,1) 3%, rgba(255,255,255,1) 5%);
+  
+}
+
+.contact{
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 3%, rgba(7,89,133,1) 5%);
+}
+
+.show .barOne {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+  
+  .show .barTwo {
+    opacity: 0;
+
+  }
+  
+  .show .barThree {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+  }
+  
+  .mobileNav{
+    height: 0vh;
+  }
+
+.show .mobileNav{
+    position: absolute;
+    display: block;
+    left: 0;
+    height: 100vh;
+   
+   
+  }
+
+  .fa-html5{
+    color: #e34f26;
+  }
+
+.fa-css3-alt{
+  color: #1572b6;
+}
+.fa-js{
+  color: #f7df1e;
+}
+
+.fa-react{
+  color: #61dbfb;
+}
+
+.fa-node-js{
+  color: #8cc84b;
+}
+
+.fa-sass{
+  color: #c76395;
+}
+  
+.card{
+  max-width: 500px;
+}
+
+.tailwind{
+  width: 40px;
+}
+
+.Greetings{
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.portHeader{
+  text-shadow: 2px 2px rgb(7,89,133);
+}
+
+.aboutHeader, .contactHeader, .edHeader, .techHeader{
+  text-shadow: 2px 2px black;
+}
+
+
+
+
+@media only screen and (max-width: 640px) {
+
+  .jumbo img{
+    height: 500px;
+}
+
+.aboutImg{
+  width: 300px;
+}
+
+}
+
+@media only screen and (min-width: 641px) {
+
+  .jumbo img{
+    height: 700px;
+}
+
+.aboutImg{
+  width: 350px;
+}
+
+
+  
+}
+
+@media only screen and (min-width: 768px) {
+  
+  .skillCards{
+    width: 480px;
+  }
+  
+  .cardSection{
+    width: 768px;
+  }
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+  .jumbo img{
+    height: 800px;
+}
+
+.aboutImg{
+  width: 400px;
+}
+
+.skillCards, .education{
+  width: 1024px;
+}
+
+.cardSection{
+  width: 1024px;
+}
+  
+}
+
+@media only screen and (min-width: 1280px) {
+
+  
+
+  .jumbo img{
+    height: 900px;
+}
+
+.skillCards, .education{
+  width: 1200px;
+}
+
+.cardSection{
+ width: 1280px;
+}
+
+  
+}
+
+
+  @media only screen and (min-width: 1536px) {
+
+    .aboutImg{
+      width: 450px;
+    }
+
+    .skillCards, .education{
+      width: 1500px;
+    }
+
+    .cardSection{
+      width: 1536px;
+     }
+
+    .line{
+      max-width: 1500px;
+    }
+
+  }
+
+  @media only screen and (min-width: 2040px) {
+
+    .max{
+      width: 2000px;
+      margin: 0 auto;
+     
+    }
+  }
