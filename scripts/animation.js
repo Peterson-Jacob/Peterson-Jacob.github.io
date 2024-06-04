@@ -1,9 +1,9 @@
 
 
 
-gsap.from('.jumboHeader', {opacity: 0, y: '75', ease: "power2.out", duration: 3});
-gsap.from('.jumboPara', {opacity: 0, y: '75', ease: "power2.out", duration: 3, delay: 0.5});
-gsap.from('.jumboSocial', {opacity: 0, y: '75', ease: "power2.out", duration: 3, delay: 1});
+gsap.from('.jumboHeader', {opacity: 0, y: '50', ease: "power2.out", duration: 2});
+//gsap.from('.jumboPara', {opacity: 0, y: '75', ease: "power2.out", duration: 3, delay: 0.5});
+//gsap.from('.jumboSocial', {opacity: 0, y: '75', ease: "power2.out", duration: 3, delay: 1});
 
 let aboutTL = gsap.timeline({
     scrollTrigger:{
@@ -32,7 +32,7 @@ let aboutTL = gsap.timeline({
   })
 
   skillsTL.add("join");
-  skillsTL.from('.sCard', {opacity: 0, y: "random(-100, 100)", stagger: 0.5}, 'join');
+  skillsTL.from('.sCard', {opacity: 0, y: "random(-100, 100)", stagger: 0.4}, 'join');
   skillsTL.from('.education', {opacity: 0, x: '-250', duration: 2}, 'join');
 
   let portTL = gsap.timeline({
@@ -46,4 +46,4 @@ let aboutTL = gsap.timeline({
     }
   })
 
-  portTL.from('.card', {opacity: 0, x: "random(-100, 100)", stagger: 0.9});
+  portTL.from('.card', {opacity: 0, x: "random(-100, 100)", stagger: 0.5});
