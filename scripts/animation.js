@@ -35,6 +35,7 @@ let aboutTL = gsap.timeline({
   skillsTL.from('.sCard', {opacity: 0, y: "random(-100, 100)", stagger: 0.4}, 'join');
   skillsTL.from('.education', {opacity: 0, x: '-250', duration: 2}, 'join');
 
+
   let portTL = gsap.timeline({
     scrollTrigger:{
       trigger: '.Portfolio',
@@ -46,4 +47,45 @@ let aboutTL = gsap.timeline({
     }
   })
 
-  portTL.from('.card', {opacity: 0, x: "random(-100, 100)", stagger: 0.5});
+ portTL.from('.card', {opacity: 0, x: "random(-100, 100)", stagger: 0.5});
+
+  
+  let gcard = document.querySelector('.gashCard');
+
+  let gdisplay = gsap.to('.gashInfo', {
+    paused: true,
+    opacity: 1,
+    duration: 1
+    
+  });
+
+  gcard.addEventListener("mouseover", () => gdisplay.play());
+  gcard.addEventListener("mouseout", () => gdisplay.reverse());
+
+
+  let tcard = document.querySelector('.cardTwo');
+
+  let tdisplay = gsap.to('.glennInfo', {
+    paused: true,
+    opacity: 1,
+    duration: 1
+    
+  });
+
+  tcard.addEventListener("mouseover", () => tdisplay.play());
+  tcard.addEventListener("mouseout", () => tdisplay.reverse());
+
+
+  let pcard = document.querySelector('.peteCard');
+
+  let pdisplay = gsap.to('.peteInfo', {
+    paused: true,
+    opacity: 1,
+    duration: 1
+    
+  });
+
+  pcard.addEventListener("mouseover", () => pdisplay.play());
+  pcard.addEventListener("mouseout", () => pdisplay.reverse());
+  
+  
