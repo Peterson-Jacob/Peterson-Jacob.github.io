@@ -57,9 +57,12 @@
   color: white;
 }
 
+
+
 .show .barOne {
     -webkit-transform: rotate(-45deg) translate(-6px, 6px);
     transform: rotate(-45deg) translate(-6px, 6px);
+
   }
   
   .show .barTwo {
@@ -72,18 +75,20 @@
     transform: rotate(45deg) translate(-6px, -8px);
   }
   
+
+
   .mobileNav{
-    height: 0vh;
+  height: 0px;
+   
   }
 
 .show .mobileNav{
     position: absolute;
     display: block;
     left: 0;
-    height: 100vh;
-    background-color: #2C7CA7;
-   
-   
+    background-color: #6F777C; 
+    height: 90vh;
+     
   }
 
   .fa-html5{
