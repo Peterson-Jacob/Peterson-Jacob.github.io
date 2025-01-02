@@ -27,37 +27,31 @@
         <div class="flex-auto w-5/6 lg:w-1/4 logo">
             <h1 class="text-white text-3xl text-center font-normal font-pacifico mt-5 mb-2 px-1  headerLogo"><a href="#">Jacob Peterson</a></h1>
         </div>
-        <div class="headerNav hidden flex-auto lg:w-3/4 lg:inline-flex">
-            <div class="header-content flex-auto lg:w-4/5 "  >
-                <ul class="text-white text-xl text-center font-normal font-poppins w-full my-0 mx-auto ">
-                    <li class="inline-block mt-7 mb-1 mx-8 hover:text-sky-500 hover:border-b-2 border-sky-500 2xl:mx-16"><a href="#About">About</a></li>
-                    <li class="inline-block mt-7 mb-1 mx-8 hover:text-sky-500 hover:border-b-2 border-sky-500 2xl:mx-16"><a href="#Portfolio">Portfolio</a></li>
-                    <li class="inline-block mt-7 mb-1 mx-8 hover:text-sky-500 hover:border-b-2 border-sky-500 2xl:mx-16"><a href="#Contact">Contact</a></li>
-                </ul>
+
+        <nav class="headerNav flex-auto lg:w-3/4 lg:inline-flex">
+            <div class="flex-auto w-1/6 mt-7 lg:hidden hamburger" id="hamburger">
+                <div class="w-12 borderBar">
+                    <div class="w-10 h-0.5 bg-white m-1.5 duration-75 barOne bars"></div>
+                    <div class="w-10 h-0.5 bg-white m-1.5 duration-75 barTwo bars"></div>
+                    <div class="w-10 h-0.5 bg-white m-1.5 duration-75 barThree bars"></div>
+                </div>
             </div>
-            <div class="flex-auto lg:w-1/5">
-                <ul class="text-white font-bold font-poppins text-xl mx-auto ">
-                    <li class="text-center mt-5 mx-auto w-32 py-1 px-0 rounded-3xl resButton"><a href="Resume-Jacob-Peterson.pdf" target="_blank">Resume</a></li>
-                </ul>
+
+        <div class="hidden flex-auto lg:w-3/4 lg:inline-flex nav-menu" id="nav-menu">
+            <div class="header-content flex-auto lg:w-4/5 " >
+            <ul class="text-white text-2xl lg:text-xl text-center font-normal font-poppins w-full my-0 mx-auto h-0 ">
+                <li class="lg:inline-block mt-16 lg:mt-7 mb-1 mx-8 hover:text-sky-500 hover:border-b-2 border-sky-500 2xl:mx-16 " ><a href="#About">About</a></li>
+                <li class="lg:inline-block mt-16 lg:mt-7 mb-1 mx-8 hover:text-sky-500 hover:border-b-2 border-sky-500 2xl:mx-16 "><a href="#Portfolio">Portfolio</a></li>
+                <li class="lg:inline-block mt-16 lg:mt-7 mb-1 mx-8 hover:text-sky-500 hover:border-b-2 border-sky-500 2xl:mx-16 "><a href="#Contact">Contact</a></li>
+            </ul>
             </div>
-        </div>
-        <div class="flex-auto w-1/6 lg:hidden hamburger">
-            <div class="mt-7 w-12 borderBar" onclick="toggle(this)">
-                <div class="w-10 h-0.5 bg-white m-1.5 duration-75 barOne"></div>
-                <div class="w-10 h-0.5 bg-white m-1.5 duration-75 barTwo"></div>
-                <div class="w-10 h-0.5 bg-white m-1.5 duration-75 barThree"></div>
-            
-            
-            <div>
-                <ul class="hidden w-full  text-2xl font-medium font-poppins mt-4 mobileNav" id="mobile" >
-                    <li class="text-white text-center my-20 hover:text-sky-500"><a href="#About">About</a></li>
-                    <li class="text-white text-center my-20 hover:text-sky-500"><a href="#Portfolio">Portfolio</a></li>
-                    <li class="text-white text-center my-20 hover:text-sky-500"><a href="#Contact">Contact</a></li>
-                    <li class="text-white text-center my-20 mx-auto w-32 py-1 px-0 rounded-3xl resButton"><a href="Resume-Jacob-Peterson.pdf" target="_blank">Resume</a></li>
-                </ul>
+        <div class="flex-auto lg:w-1/5">
+            <ul class="text-white font-bold font-poppins text-xl mx-auto ">
+                <li class="lg:inline-block text-center mt-72 mx-auto w-32 py-1 px-0 rounded-3xl lg:mt-5 resButton"><a href="Resume-Jacob-Peterson.pdf" target="_blank">Resume</a></li>
+            </ul>
             </div>
         </div>
-        </div>
+    </nav>
         
     </header>
     
