@@ -87,5 +87,17 @@ let aboutTL = gsap.timeline({
 
   pcard.addEventListener("mouseover", () => pdisplay.play());
   pcard.addEventListener("mouseout", () => pdisplay.reverse());
+
+  let lcard = document.querySelector('.lakeCard');
+
+  let lakedisplay = gsap.to('.lakeInfo', {
+    paused: true,
+    opacity: 1,
+    duration: 1
+    
+  });
+
+  lcard.addEventListener("mouseover", () => lakedisplay.play());
+  lcard.addEventListener("mouseout", () => lakedisplay.reverse());
   
   
